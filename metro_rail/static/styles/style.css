@@ -9,6 +9,9 @@
     --animate-delay: 0.9s;
 }
 
-.custom-width{
+.form-width{
     width: 100%;
+}
+.custom-width{
+    width: 50%;
 }
