@@ -2,6 +2,13 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 # Create your views here.
 
+
+def home(request):
+    data={
+        'title' : 'base'
+    }
+    return render(request, 'home/home.html', data)
+
 def index(request):
     data = {
         'title' : 'Welcome',
@@ -45,3 +52,11 @@ def sign_up(request):
         pass
     
     return render(request,'home/signup.html',data)
+
+
+
+def about_us(request):
+    return render(request, 'about_us/about_us.html')
+
+def contact_us(request):
+    return render(request, 'contact_us/contact_us.html')

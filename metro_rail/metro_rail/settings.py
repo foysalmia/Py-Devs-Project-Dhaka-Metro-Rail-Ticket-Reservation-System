@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'metro_rail.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'metro_rail', #database_name
+        'USER': 'Foysal_Ahmed', #database_user_name
+        'PASSWORD': 'foysal168385%4.88', #database_password
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+        'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
 
