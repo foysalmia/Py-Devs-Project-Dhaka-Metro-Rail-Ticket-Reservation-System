@@ -52,3 +52,8 @@ def sign_up(request):
         pass
     
     return render(request,'home/signup.html',data)
+
+
+
+def about_us(request):
+    return render(request, 'home/about_us.html')
