@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block titleblock %}
+home
+{% endblock %}
+{% block bodyblock %}
+  <div class="hero-section flex p-8 justify-evenly items-center mt-[6%] bg-no-repeat">
+    <!--Form section Started-->
+    <div class="form-section p-10 border-solid border-2 border-green-400 backdrop-blur-sm bg-white/30">
+      <div class="fast-part flex gap-10">
+        <div class="part-one">
+          <label for="Form">Form</label>
+          <select name="" id="" class="form-control p-4">
+            <option value="">Form Station</option>
+            <option value="">Uttara</option>
+            <option value="">Pallabi</option>
+            <option value="">Agargaon</option>
+            <option value="">Motijheel</option>
+          </select>
+        </div>
+        <div class="part-two">
+          <label for="Form">To</label>
+          <select name="" id="" class="form-control p-4">
+            <option value="">To Station</option>
+            <option value="">Uttara</option>
+            <option value="">Pallabi</option>
+            <option value="">Agargaon</option>
+            <option value="">Motijheel</option>
+          </select>
+        </div>
+      </div>
+      <div class="second-part flex gap-10">
+        <div class="part-one">
+      <label for="date">Date</label><br>
+      <input type="date" id="date" name="date" min="2000-01-02"><br><br>
+        </div>
+        <div class="part-two">
+          <label for="Form">Class</label>
+          <select name="" id="" class="form-control p-4">
+            <option value="">Select a Class</option>
+            <option value="">AC</option>
+            <option value="">NON-AC</option>
+            <option value="">STANDING</option>
+          </select>
+        </div>
+      </div>
+      <div class="max-ticket">
+        <label for="quantity">Quantity (between 1 and 5):  </label>
+        <input class="text-center" type="number" id="quantity" name="quantity" min="1" max="5">
+      </div>
+      <div class="submit-btn mt-6">
+        <a href="#"><button class="button2" type="submit">Submit</button></a>
+      </div>
+    </div>
+    <!--Form section End-->
+    <div class="carousel-part shadow-md shadow-indigo-500/40 ">
+
+      <div class="carousel max-w-md">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="https://new-media.dhakatribune.com/en/uploads/2022/04/21/metro-rail-2-3.jpeg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="https://www.railjournal.com/wp-content/uploads/2017/09/63ff6de3c9114221658beff13a281da3.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="https://cdn-japantimes.com/wp-content/uploads/2023/02/np_file_211185.jpeg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Paris_Metro_St_Lazare.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
