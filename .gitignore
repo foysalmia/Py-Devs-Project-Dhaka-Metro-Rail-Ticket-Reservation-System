@@ -1,0 +1,4 @@
+py_devs
+__pycache__
+db.sqlite3
+tailwind.config.js
