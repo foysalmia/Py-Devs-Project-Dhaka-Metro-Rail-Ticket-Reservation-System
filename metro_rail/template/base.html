@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
@@ -93,7 +97,7 @@
   <!--Navigation part start-->
     <div class="navbar bg-white drop-shadow-lg">
         <div class="flex-1">
-          <img class="w-20" src="{% static 'images/logo.png' %}" alt="">
+          <a href="{% url 'welcome' %}"><img class="w-20" src="{% static 'images/logo.png' %}" alt=""></a>
         </div>
         <div class="flex-none gap-2">
           <div class="form-control">
@@ -106,10 +110,10 @@
             <button class="font-medium">Train Information</button>
           </div>
           <div class="form-control ml-5">
-            <button class="font-medium">About Us</button>
+            <a href="{% url 'about'%}"><button class="font-medium">About Us</button></a>
           </div>
           <div class="form-control ml-5">
-            <button class="font-medium">Contact Us</button>
+            <a href="{% url 'contact' %}"><button class="font-medium">Contact Us</button></a>
           </div>
           <div class="dropdown dropdown-end ml-5">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
