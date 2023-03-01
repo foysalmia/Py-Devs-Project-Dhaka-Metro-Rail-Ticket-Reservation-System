@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required,redirect
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 # Create your views here.
 from .models import *

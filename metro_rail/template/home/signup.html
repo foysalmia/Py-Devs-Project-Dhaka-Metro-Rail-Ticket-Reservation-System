@@ -1,64 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-{% load static %}
-<html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'images/fav.png'%}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-    <div class="hero min-h-screen" style="background-image: url(https://i.ibb.co/HCf4G2L/backgroung.jpg);">
-        <div class="hero-overlay bg-opacity-60"></div>
-        
-        <div class="hero-content form-width flex-col justify-evenly z-10">
-            <div class="custom-width card shadow-2xl bg-base-100">
-                <div class="card-body w-full">
-                    <h1 class="text-4xl font-bold -mt-1 mb-2 text-center">Create an Account</h1>
-                <form class="" action="" method="post">
-                    {% csrf_token %}
-                    <div class="form-control mb-2">
-                        <input required type="text" placeholder="First Name" class="input input-bordered" name="fast_name"/>
-                    </div>
-                    <div class="form-control mb-2">
-                        <input required type="text" placeholder="Last Name" class="input input-bordered" name="last_name"/>
-                    </div>
-                    <div class="form-control mb-2">
-                        <input required type="email" placeholder="Email" class="input input-bordered" name="email"/>
-                    </div>
-                    <div class="form-control mb-2">
-                        <input required type="tel" placeholder="Phone Number" class="input input-bordered" name="phone"/>
-                    </div>
-                    <div class="form-control mb-2">
-                        <input required type="password" placeholder="Password" class="input input-bordered" name="password"/>
-                    </div>
-                    <div class="form-control mb-1">
-                        <input required type="password" placeholder="Confirm Password" class="input input-bordered" name="conf_password"/>
-                    </div>
-                    
-                    <div class="form-control">
-                        <button class="btn btn-success text-black reg-submit-btn" type="submit">Sign Up</button>
-                    </div>
-                </form>
-                    <div class="mt-3">
-                        <p class="text-center">Already have an account? <a href="{% url 'signin' %}" class="link link-success"> Sing In </a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
-=======
 <!DOCTYPE html>
 <html>
   <head>
@@ -256,4 +195,3 @@
     </script>
   </body>
 </html>
->>>>>>> ef149f2fb9f1946391c9373386252edaa4c2eb57
