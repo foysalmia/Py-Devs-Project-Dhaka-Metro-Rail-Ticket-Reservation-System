@@ -75,17 +75,25 @@ WSGI_APPLICATION = 'metro_rail.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'metro_rail', #database_name
-        'USER': 'Foysal_Ahmed', #database_user_name
-        'PASSWORD': 'foysal168385%4.88', #database_password
+        'NAME': 'metro_rail',
+        'USER': 'Foysal_Ahmed',
+        'PASSWORD': 'foysal168385%4.88',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
+
 
 
 # Password validation

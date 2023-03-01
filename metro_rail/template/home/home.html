@@ -10,44 +10,41 @@ home
     <div class="animate__animated animate__backInLeft form-section p-10 rounded border-green-400 backdrop-blur-sm bg-white/30">
       <div class="fast-part flex gap-10 ">
         <div class="part-one">
-          <label for="Form" class="p-1">Form</label>
-          <select name="" id="" class="form-control p-4 rounded mt-1">
-            <option value="">Form Station</option>
-            <option value="">Uttara</option>
-            <option value="">Pallabi</option>
-            <option value="">Agargaon</option>
-            <option value="">Motijheel</option>
+          <select class="select w-40">
+            <option disabled selected>Form Station</option>
+            <option>Uttara</option>
+            <option>Pallabi</option>
+            <option>Agargaon</option>
+            <option>Motijheel</option>
           </select>
         </div>
         <div class="part-two">
-          <label for="Form" class="p-1 mt-4">To</label>
-          <select name="" id="" class="form-control p-4 rounded mt-1 ml-1">
-            <option value="">To Station</option>
-            <option value="">Uttara</option>
-            <option value="">Pallabi</option>
-            <option value="">Agargaon</option>
-            <option value="">Motijheel</option>
+          <select class="select w-40">
+            <option disabled selected>To Station</option>
+            <option>Uttara</option>
+            <option>Pallabi</option>
+            <option>Agargaon</option>
+            <option>Motijheel</option>
           </select>
         </div>
       </div>
       <div class="second-part flex gap-10 mt-2">
         <div class="part-one">
-      <label for="date" class="p-1">Date</label><br>
-      <input type="date" id="date" name="date" min="2000-01-02" class="rounded p-3"><br><br>
+      <input type="date" placeholder="Select Date" id="date" name="date" min="2000-01-02" class="input w-40" /><br><br>
+      
         </div>
         <div class="part-two">
-          <label for="Form" class="p-1">Class</label>
-          <select name="" id="" class="form-control p-4 rounded mt-1">
-            <option value="">Select a Class</option>
-            <option value="">AC</option>
-            <option value="">NON-AC</option>
-            <option value="">STANDING</option>
+          <select class="select w-40">
+            <option disabled selected>Select Class</option>
+            <option>AC</option>
+            <option>Non AC</option>
+            <option>Standing</option>
           </select>
         </div>
       </div>
       <div class="max-ticket mt-7 p-2">
-        <label for="quantity" class="p-1">Quantity (between 1 and 5):  </label>
-        <input class="text-center mt-1 rounded" type="number" id="quantity" name="quantity" min="1" max="5">
+        <label for="quantity" class="p-1">Number of Tickets (between 1 and 5):  </label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5" class="input w-16" />
       </div>
       <div class="submit-btn mt-4">
         <a href="#"><button class="button2" type="submit">Buy ticket</button></a>
@@ -59,7 +56,7 @@ home
     <!--Carousel section start-->
     <div class="animate__animated animate__backInRight carousel-part shadow-md shadow-indigo-500/40 ">
 
-      <div class="carousel max-w-lg rounded">
+      <div class="w-96 carousel rounded-box">
         <div id="slide1" class="carousel-item relative w-full">
           <img src="https://www.railjournal.com/wp-content/uploads/2017/09/63ff6de3c9114221658beff13a281da3.jpg" class="w-full" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
