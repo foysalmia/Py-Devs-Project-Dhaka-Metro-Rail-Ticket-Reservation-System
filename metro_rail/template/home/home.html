@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 {% extends 'base.html' %}
@@ -94,3 +95,98 @@ home
   <!--Carousel section start-->
 
 {% endblock %}
+=======
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block titleblock %}
+home
+{% endblock %}
+{% block bodyblock %}
+  <div class="hero-section flex p-8 justify-evenly items-center mt-[4%] bg-no-repeat">
+    <!--Form section Started-->
+    <div class="animate__animated animate__backInLeft form-section p-10 rounded border-green-400 backdrop-blur-sm bg-white/30">
+      <div class="fast-part flex gap-10 ">
+        <div class="part-one">
+          <select class="select w-40">
+            <option disabled selected>Form Station</option>
+            <option>Uttara</option>
+            <option>Pallabi</option>
+            <option>Agargaon</option>
+            <option>Motijheel</option>
+          </select>
+        </div>
+        <div class="part-two">
+          <select class="select w-40">
+            <option disabled selected>To Station</option>
+            <option>Uttara</option>
+            <option>Pallabi</option>
+            <option>Agargaon</option>
+            <option>Motijheel</option>
+          </select>
+        </div>
+      </div>
+      <div class="second-part flex gap-10 mt-2">
+        <div class="part-one">
+      <input type="date" placeholder="Select Date" id="date" name="date" min="2000-01-02" class="input w-40" /><br><br>
+      
+        </div>
+        <div class="part-two">
+          <select class="select w-40">
+            <option disabled selected>Select Class</option>
+            <option>AC</option>
+            <option>Non AC</option>
+            <option>Standing</option>
+          </select>
+        </div>
+      </div>
+      <div class="max-ticket mt-7 p-2">
+        <label for="quantity" class="p-1">Number of Tickets (between 1 and 5):  </label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5" class="input w-16" />
+      </div>
+      <div class="submit-btn mt-4">
+        <a href="#"><button class="button2" type="submit">Buy ticket</button></a>
+      </div>
+    </div>
+    <!--Form section End-->
+
+
+    <!--Carousel section start-->
+    <div class="animate__animated animate__backInRight carousel-part shadow-md shadow-indigo-500/40 ">
+
+      <div class="w-96 carousel rounded-box">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="https://www.railjournal.com/wp-content/uploads/2017/09/63ff6de3c9114221658beff13a281da3.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="https://www.newagebd.com/files/records/news/202212/190151_157.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="https://cdn-japantimes.com/wp-content/uploads/2023/02/np_file_211185.jpeg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Paris_Metro_St_Lazare.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Carousel section start-->
+
+{% endblock %}
+>>>>>>> ef149f2fb9f1946391c9373386252edaa4c2eb57
