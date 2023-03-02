@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from .models import *
 # from .forms import OrderForm, CreateUserForm
 from .forms import CreateUserForm
+#from home.models import Contacts
 
 
 def index(request):
@@ -77,4 +78,16 @@ def about_us(request):
 
 @login_required(login_url='signin')
 def contact_us(request):
+    if request.method=='POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        content = request.POST['content']
+        print(name, email, content)
+
+        if len(name)<3 or len(email)<6 or len(content)<4:
+            messages.error(request, "Please fill the form correctly!")
+        else:
+            contact = Contact(name = name, email = email, content = content)
+            contact.save()
+            messages.success(request, "Your message has been sent successfully!")
     return render(request, 'contact_us/contact_us.html')
