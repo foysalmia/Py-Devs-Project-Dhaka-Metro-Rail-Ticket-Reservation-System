@@ -9,3 +9,4 @@ class AboutUs(models.Model):
     descrption = models.CharField(max_length=100, blank=True)
     email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=12)
+    link_user = models.URLField(max_length=200, blank=True)

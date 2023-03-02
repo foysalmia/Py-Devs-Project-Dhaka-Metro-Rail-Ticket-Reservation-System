@@ -22,7 +22,7 @@ background: linear-gradient(63deg, rgba(143,255,206,0.5970763305322129) 0%, rgba
             <th class="text-[16px]">Name</th>
             <th class="text-[16px]">Email</th>
             <th class="text-[16px]">Phone Number</th>
-            <th></th>
+            <th class="text-[16px]">Github</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@ background: linear-gradient(63deg, rgba(143,255,206,0.5970763305322129) 0%, rgba
             </td>
             <td>{{i.phone}}</td>
             <th>
-              <button class="btn btn-ghost btn-xs">show more</button>
+              <button class="btn btn-ghost btn-xs"> <a href="{{i.link_user}}" target="_blank">Github</a></button>
             </th>
           </tr>
          {% endfor %}
