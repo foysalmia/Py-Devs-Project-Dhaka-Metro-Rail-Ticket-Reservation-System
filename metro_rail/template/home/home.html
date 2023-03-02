@@ -7,24 +7,23 @@ home
 {% block bodyblock %}
   <div class="hero-section flex p-8 justify-evenly items-center mt-[4%] bg-no-repeat">
     <!--Form section Started-->
-    <div class="animate__animated animate__backInLeft form-section p-10 rounded border-green-400 backdrop-blur-sm bg-white/30">
+    <form method="POST" class="animate__animated animate__backInLeft form-section p-10 rounded border-green-400 backdrop-blur-sm bg-white/30">
+      {% csrf_token %}
       <div class="fast-part flex gap-10 ">
         <div class="part-one">
-          <select class="select w-40">
+          <select name="from" class="select w-40">
             <option disabled selected>Form Station</option>
-            <option>Uttara</option>
-            <option>Pallabi</option>
-            <option>Agargaon</option>
-            <option>Motijheel</option>
+            {% for route in routes %}
+            <option class="p-2 font-medium">{{route.name}}</option>
+            {% endfor %}
           </select>
         </div>
         <div class="part-two">
-          <select class="select w-40">
+          <select name="to" class="select w-40">
             <option disabled selected>To Station</option>
-            <option>Uttara</option>
-            <option>Pallabi</option>
-            <option>Agargaon</option>
-            <option>Motijheel</option>
+            {% for route in routes %}
+            <option class="p-2 font-medium">{{route.name}}</option>
+            {% endfor %}
           </select>
         </div>
       </div>
@@ -34,7 +33,7 @@ home
       
         </div>
         <div class="part-two">
-          <select class="select w-40">
+          <select name="seat" class="select w-40">
             <option disabled selected>Select Class</option>
             <option>AC</option>
             <option>Non AC</option>
@@ -47,9 +46,9 @@ home
         <input type="number" id="quantity" name="quantity" min="1" max="5" class="input w-16" />
       </div>
       <div class="submit-btn mt-4">
-        <a href="#"><button class="button2" type="submit">Buy ticket</button></a>
+        <button class="button2" type="submit">Buy ticket</button>
       </div>
-    </div>
+    </form>
     <!--Form section End-->
 
 

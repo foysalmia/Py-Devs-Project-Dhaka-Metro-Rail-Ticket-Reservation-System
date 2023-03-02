@@ -58,9 +58,54 @@ def sign_in(request):
 
 @login_required(login_url='signin')
 def home(request):
+    routes = Routes.objects.all()
     data={
-        'title' : 'base'
+        'routes' : routes
     }
+    
+    if request.method == 'POST':
+        from_station = request.POST['from']
+        to_station = request.POST['to']
+        date = request.POST['date']
+        seat = request.POST['seat']
+        quantity = int(request.POST['quantity'])
+        user = request.user.username
+
+        #calculation distance
+        from_station_no = 0
+        to_station_no = 0
+        for station in routes:
+            if from_station == station.name:
+                from_station_no = station.station_no
+                # print(station.station_no)
+            if to_station == station.name:
+                to_station_no = station.station_no
+            
+            if from_station_no and to_station_no:
+                break
+
+        distance = abs(to_station_no - from_station_no)
+        # print(distance)
+
+        #calculating Cost
+        total_cost = 0
+        if seat=="AC":
+            total_cost = quantity * 20 * distance
+        elif seat == "Non AC":
+            total_cost = quantity * 15 * distance
+        else:
+            total_cost = quantity * 10 * distance
+
+        if total_cost / quantity < 20:
+            total_cost = 20 * quantity
+
+        print(total_cost)
+        trip = Trips.objects.create(from_station=from_station,to_station=to_station,date=date,seat_type=seat,seat_quantity=quantity,passenger=user,cost=total_cost)
+        trip.save()
+        if trip:
+            print(from_station,to_station,date,seat,quantity, user)
+
+            return render(request,'book/book.html',{'trips':trip})
     return render(request, 'home/home.html', data)
 
 
@@ -78,3 +123,8 @@ def about_us(request):
 @login_required(login_url='signin')
 def contact_us(request):
     return render(request, 'contact_us/contact_us.html')
+
+
+@login_required(login_url='signin')
+def booking(request):
+    return render(request, 'book/book.html')
