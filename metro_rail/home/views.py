@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 # Create your views here.
-from .models import *
+from home.models import AboutUs
 # from .forms import OrderForm, CreateUserForm
 from .forms import CreateUserForm
 
@@ -72,7 +72,11 @@ def log_out(request):
 
 @login_required(login_url='signin')
 def about_us(request):
-    return render(request, 'about_us/about_us.html')
+    val = AboutUs.objects.all()
+    data={
+        'val' : val,
+    }
+    return render(request, 'about_us/about_us.html', data)
 
 
 @login_required(login_url='signin')

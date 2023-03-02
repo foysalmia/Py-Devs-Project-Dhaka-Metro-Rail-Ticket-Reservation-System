@@ -72,6 +72,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'metro_rail.wsgi.application'
 
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -85,9 +89,9 @@ WSGI_APPLICATION = 'metro_rail.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'metro_rail',
-        'USER': 'Foysal_Ahmed',
-        'PASSWORD': 'foysal168385%4.88',
+        'NAME': 'mydata',
+        'USER': 'amit',
+        'PASSWORD': 'amitsarker95@',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         'OPTIONS': {'charset': 'utf8mb4'},
