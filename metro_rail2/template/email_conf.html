@@ -1,0 +1,8 @@
+{% autoescape off %}
+Well come to Py Devs Metro Rail.
+Conform your account.
+conformation link = http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+<!-- http://{{ domain }}/activate/{{ uid }}/{{ token }} -->
+{% endautoescape %}
+
+{% comment %} uid64=uid {% endcomment %}
