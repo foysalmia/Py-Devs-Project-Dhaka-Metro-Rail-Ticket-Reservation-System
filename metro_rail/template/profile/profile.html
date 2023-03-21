@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block titleblock %}
+Profile
+{% endblock %}
+
+{% block bodyblock %}
+
+<!-- component -->
+
+<!-- Container -->
+<div class="flex flex-wrap min-h-screen w-full content-center justify-center py-5" style="background: rgb(143,255,206);
+background: linear-gradient(63deg, rgba(143,255,206,0.5970763305322129) 0%, rgba(46,245,116,0.6530987394957983) 100%);">
+
+    <!-- Login component -->
+    <div class="flex shadow-md">
+        <!-- Login banner -->
+        <div class="flex flex-wrap content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+            <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md"
+                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/67398341_2332188563714903_1728208588377161728_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_eui2=AeE4buYaHypxwe5s-dlR1cjQ_biWHXwwnED9uJYdfDCcQEH-3U7099CaxZAnu0kguuxuAybf8p01p64Wu-CclfsA&_nc_ohc=EDi5DyFjtsMAX8PGsoK&_nc_ht=scontent.fdac5-2.fna&oh=00_AfDpLm4ym307k7PZh1vDWEVNFcjuGWCjQZzVhXLffMvpuQ&oe=641E7736">
+        </div>
+        <!-- Login form -->
+        <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white"
+            style="width: 24rem; height: 32rem;">
+            <div class="w-72">
+                <!-- Heading -->
+                <h1 class="text-xl font-semibold">Profile Information</h1>
+
+                <!-- Form -->
+                <form class="mt-4">
+                    <div class="mb-3">
+                        <label class="mb-2 block text-xs font-semibold">Username</label>
+                        <input type="text" value="{{user.username}}" readonly
+                            class="block w-full rounded-md border border-gray-300 focus:border-green-700 focus:outline-none focus:ring-1 focus:ring-green-700 py-1 px-1.5 text-gray-700" />
+                        <small class="text-gray-400">Username can not change</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="mb-2 block text-xs font-semibold">First Name</label>
+                        <input type="text" value="Amit"
+                            class="block w-full rounded-md border border-gray-300 focus:border-green-700 focus:outline-none focus:ring-1 focus:ring-green-700 py-1 px-1.5 text-gray-700" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="mb-2 block text-xs font-semibold">Last Name</label>
+                        <input type="text" value="Sarker"
+                            class="block w-full rounded-md border border-gray-300 focus:border-green-700 focus:outline-none focus:ring-1 focus:ring-green-700 py-1 px-1.5 text-gray-700" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="mb-2 block text-xs font-semibold">Email</label>
+                        <input type="email" value="{{user.email}}"
+                            class="block w-full rounded-md border border-gray-300 focus:border-green-700 focus:outline-none focus:ring-1 focus:ring-green-700 py-1 px-1.5 text-gray-700" />
+                    </div>
+
+                    
+
+                    <div class="mb-3">
+                        <button
+                            class="mb-1.5 block w-full text-center text-white bg-green-500 hover:bg-green-900 px-2 py-2 rounded-md">Edit Profile Info</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+
+{% endblock %}

@@ -128,3 +128,8 @@ def contact_us(request):
 @login_required(login_url='signin')
 def booking(request):
     return render(request, 'book/book.html')
+
+@login_required(login_url='signin')
+def profile(request):
+    user = request.user
+    return render(request, 'profile/profile.html',{'user':user})
